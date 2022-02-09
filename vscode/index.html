@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work price generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>WORK PRICE GENERATOR</h1>
+    <h3>(Residential)</h3>
+<form id="format">
+    <label for="sqft">Square Footage of Property</label>
+    <input name="sqft" type="number" id="sqft">
+    <label for="stories">How Many Stories?</label>
+    <select name="stories" id="stories">
+        <option value="choose">Choose</option>
+        <option value="one">1</option>
+        <option value="two">2</option>
+        <option value="three">3</option>
+    </select>
+    <label for="siding">Siding Material?</label>
+    <input type="text" class="siding" name="siding">
+    <label for="balcony">Balcony?</label>
+    <select name="balcony" id="balcony">
+        <option value="choose" selected>Choose</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select>
+    <label for="patio">Patio?</label>
+    <select name="patio" id="patio">
+        <option value="choose">Choose</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select>
+    <label for="fence">Fence?</label>
+    <select name="fence" id="fence">
+        <option value="choose">Choose</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select>
+    <label for="elevated">Elevated?</label>
+    <select name="elevated" id="elevated">
+        <option value="choose" selected>Choose</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select>
+    <label for="driveway">Driveway?</label>
+    <select name="driveway" id="driveway">
+        <option value="choose">Choose</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select>
+    <button class="submit-button" type="submit">Submit</button>
+</form>
+ 
+<div id="myModal">
+    <div id="receipt">
+        <span class="close">&times;</span>
+        <h2>Options Selected</h2>
+        <div id="sqft_price"></div>
+        <div id="story_price"></div>
+        <div id="balc_price"></div>
+        <div id="patio_price"></div>
+        <div id="fence_price"></div>
+        <div id="elev_price"></div>
+        <div id="drive_price"></div>
+        <div id="total_price"></div>
+        <container id="modal_btns">
+            <p>Looks Good?</p>
+            <button type="reset" onclick="closer()">Cancel</button>
+            <button type="reset" onclick="closer()">Confirm</button>
+        </container>
+    </div>
+</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+body {
+  background: #082032;
+  color: white;
+}
+
+h1,
+h3 {
+  text-align: center;
+}
+
+form {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 200px;
+  grid-gap: 16px;
+  background: #082032;
+  padding: 1em;
+  border: none;
+  margin: 2rem auto 0 auto;
+  max-width: 600px;
+  box-shadow: inset 5px 5px rgba(0, 0, 0, 0.08), 5px 5px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+label {
+  float: left;
+  width: 200px;
+  padding-right: 24px;
+  grid-column: 1/2;
+}
+
+input {
+  float: left;
+  width: calc(100% - 100px);
+}
+
+form button {
+  float: right;
+  width: calc(100% - 300px);
+  color: #ff4c29;
+  border: 1px solid #ff4c29;
+  background: none;
+  position: relative;
+  left: 52%;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+select {
+  float: left;
+  width: calc(100% - 100px);
+}
+
+input,
+button {
+  grid-column: 2/3;
+}
+
+#myModal {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow: auto;
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+#receipt {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80vw;
+  border-radius: 10px;
+  height: 70vh;
+  color: #082032;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  text-align: center;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#receipt button {
+  width: 20vw;
+}
+
+#modal_btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 75vw;
+  position: relative;
+  top: 45%;
+}
